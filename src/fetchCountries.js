@@ -4,6 +4,7 @@ const params = 'fields=name,capital,population,flags,languages'
 
 
 export default function fetchCountries(country) {
+    console.log(`${BASE_URL}/${country}?${params}`);
     return fetch(`${BASE_URL}/${country}?${params}`)
         .then(response => {
             if (!response.ok) {
